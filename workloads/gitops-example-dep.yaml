@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: gitops-example
-        image: 232660966648.dkr.ecr.ap-northeast-2.amazonaws.com/gitops-app-demo:74b7e9f
+        image: 232660966648.dkr.ecr.ap-northeast-2.amazonaws.com/gitops-app-demo:e915dad
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
