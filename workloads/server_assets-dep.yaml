@@ -1,0 +1,31 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server_assets-deployment
+  namespace: gitops-cicd
+  labels:
+    app: server_assets
+  annotations:
+    # Container Image Automated Updates
+    fluxcd.io/automated: "true"
+spec:
+  selector:
+    matchLabels:
+      app: server_assets
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: server_assets
+    spec:
+      containers:
+      - name: server_assets
+        image: 232660966648.dkr.ecr.ap-northeast-2.amazonaws.com/server_assets:5f37643
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 9002
+          protocol: TCP
+        - containerPort: 9502
+          protocol: TCP
+
