@@ -20,7 +20,7 @@ spec:
         app: server-assets
     spec:
       containers:
-      - name: server_assets
+      - name: server-assets
         image: 232660966648.dkr.ecr.ap-northeast-2.amazonaws.com/server_assets:5f37643
         imagePullPolicy: IfNotPresent
         ports:
