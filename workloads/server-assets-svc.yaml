@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: server_assets-service
+  name: server-assets-service
   namespace: gitops-cicd
   labels:
-    app: server_assets
+    app: server-assets
 spec:
   type: ClusterIP
   ports:
@@ -15,4 +15,4 @@ spec:
       targetPort: 9502
       protocol: TCP
   selector:
-    app: server_assets
+    app: server-assets

@@ -1,19 +1,19 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: server_assets-alb-ingress
+  name: server-assets-alb-ingress
   namespace: gitops-cicd
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
   labels:
-    app: server_assets
+    app: server-assets
 spec:
   rules:
     - http:
         paths:
           - path: /*
             backend:
-              serviceName: server_assets-service
+              serviceName: server-assets-service
               servicePort: 80
